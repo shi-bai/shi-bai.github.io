@@ -1,0 +1,5 @@
+ AuthName "Add your login message here."
+ AuthType Basic
+ AuthUserFile /www/bai/.htpasswd
+ AuthGroupFile /dev/null
+ require user caramel

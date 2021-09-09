@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<body bgcolor="#C0D9D9" lang=EN-US>
+    
+    <meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; I; Linux 2.2.13 i686) [Netscape]">
+    <title>MAD 2502 Introduction to Computational Mathematics</title>
+  </head>
+  <body>
+    <style> .gone {   text-decoration: line-through; } </style> 
+    <h1>MAD 2502 Introduction to Computational Mathematics (Spring 2018)
+    </h1>
+    <hr width="100%"><b></b>    
+    <b>Instructor:</b>&nbsp; Dr. Shi Bai
+    <br><b>Office:</b>&nbsp; Science Building (SE43), Room 230.
+    <br><b>Email:&nbsp;</b> <a href="mailto: sbai@fau.edu">sbai@fau.edu</a>
+    <br><b>Lecture time and location:&nbsp;</b> 
+    W F	9:30-10:50AM	 in <b>SE 271</b>.
+    <br><b>Office hours:&nbsp;</b> Wed 2 - 3 pm; and by appointment; and lab session (Wed 4 - 5 pm; Fri 2 - 3 pm).
+    <br> 
+    <b><a href="syllabus.pdf">Syllabus</a></b> and
+    <b>Textbook:</b> John V. Guttag, Introduction to Computation and Programming Using Python. 2nd Ed.
+    (The FAU library has e-book access available for FAU students.)
+    <br>
+
+
+<s><font size="3"><b>Mid-exam:</b></font>
+<b><font size="3" color="blue"> 9:30am-11:00am, Mar 2 (Fri). </font>Room: SE 271.</b></s><br>
+
+
+<font size="5"><b>Final exam:</b></font>
+<b><font size="5" color="blue">Wed (May 2) 7:45am - 10:15am. Room: SE 271.</font></b>
+
+    
+    <hr width="100%"><b></b>
+    <b><div id="div_id" align="center"><h2>General information</h2></b></div> 
+    <b>Suggestion:</b> please read, review and understand the codes discussed on the lecture. Here are some more detailed suggestions:
+    <br>
+<ol>
+  <li>After the first several weeks, you should know the basics of Python including: integer, float, string types; print and input functions; conditional argument; for and while loop; lists; functions. </li>
+  <li>The fundamental barrier is to understand what happens as the computer executes each line of the code (in particular, those in the loops or branches). To pass this course,
+    it is important to understand the algorithms discussed on the class <font size="4" ><b>Line-by-Line, ensuring you understand what each line is precisely doing.  A vague/imprecise understanding is not enough.</b></font>
+  <li> In the beginning, it's not a surprise to expect to spend <b>6-10 hours</b> to fully understand a <b>tiny</b> piece of program/code consisting of (e.g.) <b>10</b> lines. Such efforts/time should be expected.</li>
+    
+  </li> 
+</ol>
+      Here are some more websites for tutorials/exercises.<br>
+
+      &#160;&#160;<i><a href="https://snakify.org/">Interactive tutorial </a>(snakify.org)</i><br>
+      &#160;&#160;<i><a href="http://docs.python.org/3.3/tutorial/introduction.html">Python Tutorial</a></i><br>
+            &#160;&#160;<i><a href="https://projecteuler.net/">Project Euler</a> (more mathematical/computational problems)</i>
+
+      <br> <b>Tutorials/Lab sessions:</b> Wed 4-5pm and Fri 2-3pm in SE 271. Please consider to come to the tutorial session if you need hands-on guide.
+<br>
+<b> Quizzes:</b> there will be &ge; 5  quizzes.  But only your best 5 quizzes will be taken into account towards your final grade; the others will be dropped.
+
+<br>
+<b> Open Computer Labs:</b> the following open computer labs have Python installed: <b>UN 222 (Student Union), BU 201 (College of Business) and CM 142 (Computer Center).</b>
+
+
+
+    <br>
+    <hr width="100%"><b></b>
+    <b><div id="div_id" align="center"><h2>Schedule</h2></b></div> 
+    The course covers topics and examples in <b><font color="red">numerical algorithms</font>, <font color="blue">number theoretic algorithms</font>, <font color="purple">combinatorics</font>, <font color="Chocolate">algebra</font>, <font color="Fuchsia">cryptography</font> and misc topics</b>.
+    <br>
+    <br>
+
+    
+
+    <table style="width:80%" border="3">
+      <tr>
+        <th></th>
+        <th>Chapters</th>         
+        <th>Topics</th> 
+        <th>Algorithms and extra</th>
+        <th>Codes</th> 
+        <th>Annoucements</th>    
+      </tr>
+
+      <tr>
+        <td>Week 1</td>
+        <td> Chap 2.1-2.4</td>        
+        <td> Python basics: numeric data types, strings, variables, IDLE. </td> 
+        <td> <a href="https://en.wikipedia.org/wiki/IDLE">IDLE</a><br></td>
+        <th><a href="code/lec1.py">Lecture 1</a><br>
+          <a href="code/lec1_operators.py">Operators</a><br>
+          <a href="code/lec2.py">Lecture 2</a><br>
+          <a href="code/lec2_input.py">Input</a></th>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Week 2</td>
+        <td> Chap 3.1-3.3; <br> Chap 9</td>                
+        <td> Intro to algorithms,<br> algorithmic complexity. </td> 
+        <td> <font color="red">Computing/approx square/cubic root. </font>
+          <br> </td>
+        <th> <a href="code/lec3.py">Lecture 3</a><br>
+          <a href="code/lec4.py">Lecture 4</a><br>          
+
+        </th>                 
+        <td>Quiz 1</td>
+      </tr>
+
+      <tr>
+        <td>Week 3</td>
+        <td> Chap 4.1-4.2</td>                        
+        <td> Functions in Python. </td> 
+        <td> <br><font color="red">Bisection method </font>
+          (read           <a href="https://en.wikipedia.org/wiki/Bisection_method">this</a>
+            and <a href="http://mathforcollege.com/nm/mws/gen/03nle/mws_gen_nle_txt_bisection.pdf">this</a>).
+
+          </td>
+        <th>
+          <a href="code/lec5.py">Lecture 5</a><br>
+          <a href="code/scoping.py">Scope</a><br>
+          <a href="code/bisection.py">Bisection</a><br>
+
+
+        </th>                         
+        <td>Quiz 2</td>
+      </tr>
+
+      <tr>
+        <td>Week 4</td>
+        <td> Chap 3.4 <br> Chap 5.1-5.5</td>                
+        <td> Algorithmic complexity; <br> Python structured types: tuples and lists. </td> 
+        <td> <br><font color="red">Horner's method</font> 
+          (read           <a href="https://en.wikipedia.org/wiki/Horner%27s_method">this</a>).<br>
+          </td>
+        <th>          <a href="code/horner.py">Horner's method</a><br>                                   
+                  <a href="code/bisect_horner.py">Bisection with Horner</a><br>          </th>                         
+        <td><a href="hw/hw1.pdf">Assignment 1</a><br>(Due Feb 5th, 5pm)</td>
+      </tr>
+
+      
+      <tr>
+        <td>Week 5</td>
+        <td> Chap 3.5. </td>                
+        <td>  Root-finding algorithms. </td>
+        <td> <font color="red">Newton's method</font> (read <a href="https://en.wikipedia.org/wiki/Newton%27s_method#Description">this</a> and <a href="http://mathfaculty.fullerton.edu/mathews/a2001/Animations/RootFinding/NewtonMethod/NewtonMethod.html">animations</a>). </td>
+        <th><a href="code/Newton.py">Newton's method</a><br> </th>                         
+        <td> Quiz 3</td>
+      </tr>
+
+
+
+      
+      <tr>
+        <td>Week 6</td>
+        <td> Chap 4.3 </td>                
+        <td>  More numerical algorithms; <br> Recursion.  </td>
+        <td><font color="red">Numerical diff. </font>(read <a href="https://en.wikipedia.org/wiki/Numerical_differentiation">this</a>);<br>
+          <font color="red">Secant method</font> (read <a href="https://en.wikipedia.org/wiki/Secant_method">this</a> and <a href="http://mathfaculty.fullerton.edu/mathews/a2001/Animations/RootFinding/SecantMethod/SecantMethod.html">animations</a>);
+
+
+
+          <br> <font color="purple"> Factorial, Fibonacci sequence</font> (read <a href="https://en.wikipedia.org/wiki/Fibonacci_number">this</a>);  <br> <font color="purple">binomial coefficients </font> (read <a href="https://en.wikipedia.org/wiki/Binomial_coefficient">this</a>). </td>
+        <th><a href="code/Secant.py">Secant method</a><br> <a href="code/recursion.py">Recursion</a></th>                                 
+        <td> Quiz 4</td>
+      </tr>
+      
+
+
+      
+      <tr>
+        <td>Week 7</td>
+        <td> </td>                
+        <td> Floating-point numbers   </td> 
+        <td> <font color="red"> Floating point numbers</font> (read <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">this</a> and <a href="http://cs.furman.edu/digitaldomain/more/ch6/dec_frac_to_bin.htm">this</a>); <br>
+          </td>
+        <th><a href="code/flp.py">Floating-point numbers</a></th>
+        <td><a href="hw/hw2.pdf">Assignment 2</a><br>(Due Feb 26th, 5pm)</td>        
+      </tr>
+
+      <tr>
+        <td>Week 8</td>
+        <td> Chap 15/16</td>                        
+        <td>  Random number generator; <br> simulating games. </td> 
+        <td> Coin flipping; <br> Birthday paradox (read <a href="https://en.wikipedia.org/wiki/Birthday_problem">this</a>); <br> Monty hall problem (read <a href="https://en.wikipedia.org/wiki/Monty_Hall_problem">this</a>).</td>
+        <th><a href="code/rand.py">Coin flipping</a><br><a href="code/rand_birth.py">Birthday paradox</a><br><a href="code/rand_montyhall.py">Monty hall</a><br></th>                         
+        <td>Mid-exam <br> (Friday 9:30-11:00am)</td>
+      </tr>  
+
+      <tr>
+        <td>Week 9 (spring break)</td>
+        <td> </td>
+        <td>  </td>        
+        <td> </td>
+        <th></th>                         
+        <td></td>
+      </tr>  
+
+      
+      <tr>
+        <td>Week 10</td>
+        <td> </td>
+        <td> Solution to mid-exam</td>        
+        <td></font> </td>
+        <th></th>
+        <td><a href="hw/hw3.pdf">Assignment 3</a><br>(Due Mar 21, 5pm)</td>                
+      </tr>  
+
+
+      <tr>
+        <td>Week 11</td>
+        <td> </td>
+        <td> Topics in number theory</td>        
+        <td><font color="blue">Detecting primes (read <a href="https://en.wikipedia.org/wiki/Primality_test#Simple_methods">this)</a>; <br>Sieve of Eratosthenes (read <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Example">this</a>);<br>Euclidean algorithm (read the <a href="https://en.wikipedia.org/wiki/Euclidean_algorithm#Description">procedure).</font> </td>
+        <th><a href="code/prime.py">Primality tests;</a> <br> <a href="code/euclidean.py">Euclidean alg.</a></th>
+        <td>Quiz 5</td>                
+      </tr>  
+
+      
+      
+      <tr>
+        <td>Week 12</td>
+        <td> </td>
+        <td> Topics in number theory <br> and cryptography </td>        
+        <td> <font color="blue">Modular arithmetic (read <a href="https://www.math.cornell.edu/~mec/2003-2004/cryptography/diffiehellman/diffiehellman.html">this</a>); <br>Trial division (read <a href="https://en.wikipedia.org/wiki/Trial_division">this</a>);<br>Pollard's rho method (read <a href="https://www.csh.rit.edu/~pat/math/quickies/rho/">this</a>);</font><font color="Fuchsia"> </font></td>
+        <th><a href="code/factoring.py">Trial division;</a> <br> <a href="code/rho.py">Pollard's rho method.</a></th>
+        <td>Quiz 6</td>        
+      </tr>  
+
+
+
+      
+      <tr>      
+        <td>Week 13</td>
+        <td> Chap 10</td>
+        <td> Search and sort .</td>        
+        <td> Binary search (try <a href="http://www.cs.armstrong.edu/liang/animation/web/BinarySearch.html">this</a>); <br>Selection and merge sort (read <a href="https://en.wikipedia.org/wiki/Selection_sort">this</a> and <a href="https://en.wikipedia.org/wiki/Merge_sort">this</a>).</td>
+        <th><a href="code/bin.py">Binary search;</a> <br> <a href="code/sort.py">Sorting.</a></th>        
+        <td><a href="hw/hw4.pdf">Assignment 4</a><br>(Due Apr 5th, 5pm)</td>                        
+      </tr>
+
+
+
+
+
+      <tr>
+        <td>Week 14</td>
+        <td> Chap 12 </td>
+        <td> Topics in cryptography</td>        
+        <td><font color="Fuchsia">0-1 Knapsack Problem (read <a href="https://en.wikipedia.org/wiki/Knapsack_problem">this</a>);<br>Meet-in-the-middle attack (read <a href="https://en.wikipedia.org/wiki/Knapsack_problem#Meet-in-the-middle">this</a>).</font></td>
+        <th><a href="code/knapsack.py">0-1 Knapsack.</a></th>
+        <td>Quiz 7 (<b>Wed</b>)</td>                
+      </tr>  
+
+      
+      <tr>
+        <td>Week 15</td>
+        <td> </td>
+        <td> </td>
+        <td> Review sessions</td>
+        <th></th>
+        <td>Quiz 8 (<b>Wed</b>)</td>        
+      </tr>
+      
+      
+
+
+      <tr>
+        <td>Exam week (April 26 – May 2)</td>
+        <td> </td>
+        <td>  </td>        
+        <td> </td>
+        <th></th>
+        <td></td>                                
+      </tr>  
+      
+      
+    </table>
+<br>
+<hr width="100%"><b>Documentation:</b><br>
+&#160;&#160;<i><a href="https://docs.python.org/3/">Python 3 documentation -- Official Website</a></i><br>
+&#160;&#160;<a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/index.htm">A Gentle Introduction to Programming Using Python</a> MIT Open Courseware. <br>
+&#160;&#160;<a href="http://pythontutor.com/visualize.html">Visualize Python Execution</a><br>
+&#160;&#160;<a href="https://members.loria.fr/PZimmermann/sagebook/english.html">Mathematical Computation with SageMath</a><br>
+&#160;&#160;<a href="http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#the-print-function">Differences between Python 2.7.x and Python 3.x</a><br>
+&#160;&#160;<i><a href="https://docs.python.org/3/faq/windows.html">Python on Windows FAQ</a></i><br>
+
+<hr width="100%"><b>IDLE:</b><br>
+&#160;&#160;<i><a href="https://hkn.eecs.berkeley.edu/~dyoo/python/idle_intro/index.html">One Day of IDLE Toying</a></i><br>
+&#160;&#160;<i><a href="https://www.cs.uky.edu/~keen/help/python-tutorial/Lab0.html">Intro to Python IDLE</a></i><br>
+
+
+
+
+
+
+<hr width="100%"><b></b><br>
+
+</body></html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<style type="text/css">
+  table.sample {
+	border-width: 2px;
+	border-spacing: 2px;
+	border-style: none;
+	border-color: gray;
+	border-collapse: collapse;
+	background-color: rgb(255, 245, 238);
+  }
+  table.sample th {
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: black;
+	background-color: white;
+	-moz-border-radius: ;
+  }
+  table.sample td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: inset;
+	border-color: black;
+	background-color: white;
+	-moz-border-radius: ;
+  }
+</style>
+
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>polynomial log</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>
+    <br>
+    *This is a log for polynomial search.<br>
+    *We've changed codes for the Murphy's E score in CADO so the scores might be different. The ranking, however, is unchanged.<br>
+    *MurphyE is computed with Bf=1e11,Bg=1e11,area=1e18<br>
+    <br>
+
+    <table class="sample">
+
+      <tbody>
+
+        <tr>
+          <th style="width: 104px;">Murphy's E</th>
+          <th style="width: 130px;">Polynomials</th>
+          <th style="width: 440px;">L2<br>
+          <th style="width: 133px;">Parameters </th>
+          <th style="width: 297px;">Sieving estimate</th>
+          <th style="width: 65px;">When<br></th>
+          <th style="width: 76px;">Comments</th>
+        </tr>
+
+        <tr>
+          <td>2.39e-10</td>
+          <td>
+            <a href="polys/E234e-10.poly.sopt">size-optimized</a><br>
+            <a href="polys/E234e-10.poly.ropt">root-optimized</a> <br>
+	    <a href="polys/E239e-10.poly.ropt">root-optimized another</a> <br>
+          </td>
+          <td>
+            L2: 77.80, alpha: -1.17<br>
+            L2: 77.84, alpha: -9.92 (proj: -2.54), E: 2.34e-10, nr: 6 <br>
+	     L2: 78.72, alpha: -10.09 (proj: -2.54), E: 2.39e-10, nr: 6 <br>
+          <td>P=5e5<br>
+          </td>
+          <td>
+          </td>
+          <td>Jan, 2014</td>
+          <td><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2.26e-10</td>
+          <td>
+            <a href="polys/E226e-10.poly.sopt">size-optimized</a><br>
+            <a href="polys/E226e-10.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 78.77, alpha: -1.65<br>
+            L2: 80.40, alpha: -11.68 (proj: -3.25), E: 2.26e-10, nr: 4 <br>
+          <td>P=3e6<br>
+          </td>
+          <td>
+          </td>
+          <td>Feb, 2013</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>2.24e-10</td>
+          <td>
+            <a href="polys/E224e-10.poly.sopt">size-optimized</a><br>
+            <a href="polys/E224e-10.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 76.69, alpha: -1.66<br>
+            L2: 76.90, alpha: -8.85 (proj: -2.41), E: 2.24e-10, nr: 2 <br>
+          <td>P=4e7<br>
+          </td>
+          <td>
+          </td>
+          <td>Feb, 2014</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>2.23e-10</td>
+          <td>
+            <a href="polys/E223e-10_TK.poly.raw">raw</a><br>
+            <a href="polys/E223e-10_TK.poly.sopt">size-optimized</a><br>
+            <a href="polys/E223e-10_TK.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 78.21, alpha: -1.56<br>
+            L2: 77.87, alpha: -2.73<br>
+            L2: 78.03, alpha: -9.85 (proj: -3.27), E: 2.23e-10, nr: 6 <br>
+          <td><br>
+          </td>
+          <td>
+          </td>
+          <td>Jun, 2013</td>
+          <td>Kleinjung
+            <br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>2.23e-10</td>
+          <td>
+            <a href="polys/E223e-10.poly.raw">raw</a><br>
+            <a href="polys/E223e-10.poly.sopt">size-optimized</a><br>
+            <a href="polys/E223e-10.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 78.70, alpha: -2.20<br>
+            L2: 77.91, alpha: -0.51<br>
+            L2: 78.89, alpha: -10.45 (proj: -2.31), E:2.23e-10, nr: 2 <br>
+          </td>
+          <td>P=3e7<br>
+          </td>
+          <td>
+          </td>
+          <td>Dec, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>2.22e-10</td>
+          <td>
+            <a href="polys/E222e-10.poly.raw">raw</a><br>
+            <a href="polys/E222e-10.poly.sopt">size-optimized</a><br>
+            <a href="polys/E222e-10.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 79.41, alpha: -1.41<br>
+            L2: 78.07, alpha: -0.16<br>
+            L2: 78.21, alpha: -9.85 (proj: -2.71), E: 2.22e-19, nr: 4 <br>
+          <td>P=8e6<br>
+          </td>
+          <td>
+          </td>
+          <td>Jan, 2013</td>
+          <td><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2.22e-10</td>
+          <td>
+            <a href="polys/E222e-10_2.poly.raw">raw</a><br>
+            <a href="polys/E222e-10_2.poly.sopt">size-optimized</a><br>
+            <a href="polys/E222e-10_2.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 79.49, alpha: -1.63<br>
+            L2: 78.50, alpha: -2.35, E: 5.56e-20<br>
+            L2: 79.18, alpha: -10.52 (proj: -2.97), E: 2.22e-19, nr: 4 <br>
+          <td>P=8e6<br>
+          </td>
+          <td>
+          </td>
+          <td>Jan, 2013</td>
+          <td><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2.19e-10</td>
+          <td>
+            <a href="polys/E219e-10.poly.sopt">size-optimized</a><br>
+            <a href="polys/E219e-10.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 78.93, alpha: -1.26<br>
+            L2:  80.17, alpha: -11.23 (proj: -3.16), E: 2.19e-10, nr: 6 <br>
+          <td>P=3e6<br>
+          </td>
+          <td>
+          </td>
+          <td>Mar, 2013</td>
+          <td><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Following polynomials are computed with Bf=1e7,Bg=5e6,area=1e16 </td>
+        </tr>
+
+        <tr>
+          <td>3.20e-19</td>
+          <td>
+            <a href="polys/E320e-19.poly.raw">raw</a> <br>
+            <a href="polys/E320e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E320e-19.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 79.72, alpha: -1.48<br>
+            L2: 76.14, alpha: -1.34, E: 6.76e-20<br>
+            L2: 77.84, alpha: -9.20 (proj: -2.02), E: 3.20e-19, nr: 2 </td>
+          <td>P=3e7<br>
+          </td>
+          <td>
+          </td>
+          <td>Dec, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>3.11e-19</td>
+          <td>
+            <a href="polys/E311e-19.poly.raw">raw</a><br>
+            <a href="polys/E311e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E311e-19.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 82.62, alpha: -3.77<br>
+            L2: 79.71, alpha: -1.56, E: 3.48e-20<br>
+            L2: 81.40, alpha: -11.85 (proj: -3.86), E: 3.11e-19, nr: 4 </td>
+          <td>P=2e7<br>
+          </td>
+          <td>
+          </td>
+          <td>Aug, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>3.07e-19</td>
+          <td><a href="polys/E307e-19.poly.raw">raw</a><br>
+            <a href="polys/E307e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E307e-19.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 80.71, alpha: -2.77<br>
+            L2: 78.89, alpha: -1.19, E: 3.86e-20<br>
+            L2: 80.44, alpha: -11.15 (proj: -2.86), E: 3.07e-19, nr: 2 </td>
+          <td>P=2e7<br>
+          </td>
+          <td>
+          </td>
+          <td>Aug, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>3.04e-19</td>
+          <td>
+            <a href="polys/E304e-19.poly.raw">raw</a><br>
+            <a href="polys/E304e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E304e-19.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 80.04, alpha: -0.19<br>
+            L2: 77.97, alpha: -0.80, E: 4.20e-20<br>
+            L2: 79.41, alpha: -9.98 (proj: -1.91), E: 3.04e-19, nr: 4 </td>
+          <td>P=2e7<br>
+          </td>
+          <td>
+          </td>
+          <td>Jul, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2.97e-19</td>
+          <td><a href="polys/E297e-19.poly.raw">raw</a><br>
+            <a href="polys/E297e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E297e-19.poly.ropt">root-optimized</a> <br>
+          </td>
+          <td>
+            L2: 83.56, alpha: -2.78<br>
+            L2: 79.48, alpha: -2.27, E: 4.20e-20<br>
+            L2: 80.69, alpha: -11.24 (proj: -3.13), E: 2.97e-19, nr: 4 </td>
+          <td>P=8e6<br>
+          </td>
+          <td>35000 core years
+          </td>
+          <td>Jun, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>2.83e-19</td>
+          <td><a href="polys/E283e-19.poly.raw">raw</a><br>
+            <a href="polys/E283e-19.poly.sopt">size-optimized</a>
+            <br><a href="polys/E283e-19.poly.ropt">
+              root-optimized</a></td>
+          <td>
+            L2: 83.14, alpha:
+            -2.49<br>
+            L2: 79.55, alpha: -0.59, E: 2.77e-20<br>
+            L2: 81.73, alpha: -11.94 (proj: -2.45), E: 2.83e-19, nr: 4 </td>
+          <td>P=8e6 </td>
+          <td><br>
+          </td>
+          <td>Jun, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>2.82e-19</td>
+          <td>
+            <a href="polys/E282e-19.poly.raw">raw</a><br>
+            <a href="polys/E282e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E282e-19.poly.ropt">root-optimized</a></td>
+          <td>
+            L2: 79.05, alpha: -1.10<br>
+            L2: 78.88, alpha: -0.83, E: 3.54e-20<br>
+            L2: 79.02, alpha: -9.49 (proj: -2.31), E: 2.82e-19, nr: 4 </td>
+          <td> </td>
+          <td><br>
+          </td>
+          <td>Jun, 2012</td>
+          <td>Msieve (Ilya Popovyan)<br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>2.74e-19<br>
+          </td>
+          <td>
+            <a href="polys/E274e-19.poly.raw">raw</a><br>
+            <a href="polys/E274e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E274e-19.poly.ropt">root-optimized</a></td>
+          <td>
+            L2: 87.14, alpha: -2.61<br>
+            L2: 78.44, alpha: -0.06, E: 3.01e-20<br>
+            L2: 80.01, alpha: -10.39 (proj: -1.94), E: 2.74e-19, nr: 4<br>
+          </td>
+          <td><br>
+            P=4e6
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+            Jun, 2012<br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            2.72e-19
+          </td>
+          <td>
+            <a href="polys/E272e-19.poly.raw">raw</a><br>
+            <a href="polys/E272e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E272e-19.poly.ropt">root-optimized</a></td>
+          <td>
+            L2: 83.14, alpha: -2.49<br>
+            L2: 77.86, alpha: -0.63, E: 2.80e-20<br>
+            L2: 79.57, alpha: -10.24 (proj: -1.96), E: 2.72e-19, nr: 4<br>
+          </td>
+          <td><br>
+            P=4e6
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+            Jun, 2012<br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            2.11e-19</td>
+          <td>
+            <a href="polys/E211e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E211e-19.poly.ropt">root-optimized</a></td>
+          <td>
+            L2: 79.46, alpha: -0.70, E: 2.69e-20<br>
+            L2: 80.64, alpha: -9.92 (proj: -2.11), E: 2.11e-19, nr: 4<br>
+          </td>
+          <td><br>
+            P=4e6
+          </td>
+          <td><br>
+          </td>
+          <td>
+            Apr, 2012</td>
+          <td><br>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            2.06e-19</td>
+          <td>
+            <a href="polys/E206e-19.poly.sopt">size-optimized</a><br>
+            <a href="polys/E206e-19.poly.ropt">
+              root-optimized</a></td>
+          <td>
+            L2: 78.71, alpha: -1.71, E: 4.62e-20<br>
+            L2: 78.60, alpha: -7.98  (proj: -1.89), E: 2.06e-19, nr: 6<br>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+          <td>
+            2011
+          </td>
+          <td>
+          </td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+Dear Colleagues,
+
+We report the factorization of RSA704, the following 704-bit (212 digits)
+number from RSA's challenge list:
+
+740375634795617128280467960974295731425931888892312890849362326389727
+650340282662768919964196251178439958943305021275853701189680982867331
+732731089309005525051168770632990723963807867100860969625379346505637
+96359
+
+The factors are
+
+9091213529597818878440658302600437485892608310328358720428512168960411
+528640933367824950788367956756806141
+
+and
+
+8143859259110045265727809126284429335877899002167627883200914172429324
+360133004116702003240828777970252499
+
+Both factors have 352 bits and 106 digits. We denote by p the larger
+factor and q the other one. We have the following factorizations,
+
+p-1 = 2^2 * 5 * 17 * 7759 * 248701 * 3311937667 * 1669783862489 *
+      1880450644642000493838449 * p49
+
+p+1 = 2 * 3^2 * 43 * 71 * 157 * 2630713 * 1850017111 *
+      1040072485315298476627 * 2023909737931501893269845781 * p36
+
+q-1 = 2 * 19 * 149 * 233 * 426163 * 34302641 * 415283201 * p79
+
+q+1 = 2^2 * 3^2 * 5^4 * 8753 * 27539 * 962945197 * p85
+
+where pK denotes a K-digit prime number.
+
+The factorization is done by CADO-NFS (http://cado-nfs.gforge.inria.fr),
+an open source implementation of the number field sieve.
+
+[Polynomial selection]
+
+We used the following degree-6 polynomial for the algebraic side,
+
+f(x) = 10614120 * x6
+     + 62813641710611 * x5
+     + 1938361239259842311964 * x4
+     + 931957113890545875115664715 * x3
+     - 11187228497714282733145127980606483 * x2
+     + 275791344247583495761263211927712634450 * x
+     + 631618785519411550157074523461307229101210175
+
+and
+
+g(x) = 1701314346829200310007393599 * x
+     - 10040119372014939875708192394943108
+
+for the rational side.
+
+Polynomial selection started in April 2011 and completed in June 2011.
+The total time spent on polynomial selection was about 12 core years.
+
+[Sieving]
+
+We did lattice sieving for special q between 5e8 and 100e8 using factor
+base bounds 250e6 on the rational side and 500e6 on the algebraic side.
+Sieving started on June 20, 2011 using clusters both at ANU and Inria
+Nancy-Grand Est. On February 26, 2012, a total of 1,313,935,004 raw
+relations were collected. The total time spent on sieving was about
+500 core years.
+
+[Filtering]
+
+The 1,313,935,004 raw relations gave 832,908,644 unique relations. After
+purge and merge, the final matrix had about 89M rows and columns, with
+17720843456 non-zero coefficients and 16568894691 in the sparse part.
+
+[Linear algebra and square root]
+
+The linear algebra started on March 19, 2012 on the french Grid’5000
+computer grid. The block Wiedemann algorithm has been used. The two
+computational-intense phases, krylov and mksol, took about 1800h of
+wall-clock time on clusters of varying size. Linear algebra was completed
+on June 29, 2012.  We found the factors one day later, on June 30, 2012.
+
+[Report]
+A report describing the details of the factorization effort can be found
+on http://maths.anu.edu.au/~bai
+
+
+Shi Bai (1), Emmanuel Thom\'e (2), Paul Zimmermann (2).
+(1): ANU; (2): Inria Nancy-Grand Est;

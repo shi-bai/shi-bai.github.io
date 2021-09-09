@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="table.css" />
+<title>Projections for GNFS polynomials</title>
+</head>
+
+<body>
+
+<h1>Projections for GNFS polynomials</h1>
+
+<p>
+The following two tables (divided into degree 5 and 6) collected polynomials for GNFS, their Murphy's E values (see Brian Murphy's <a href=http://wwwmaths.anu.edu.au/~brent/students.html>Ph.D thesis</a>) and their projections. The table might be useful to determine the targeted range in polynomial selection.
+</p>
+
+
+<h2>1. Comments</h2>
+
+<ul>
+
+<li>The Murphy E is computed in <a href=http://cado-nfs.gforge.inria.fr/>CADO-NFS</a>. They may have different values if you're using other softwares.</li>
+
+<li>Murphy E = 0.00e+00 normally means I don't have such polynomials. Appreciate if you can send them.</li>
+
+<li>The polynomials are collected from corresponding reports for the factorization, Paul Zimmermann's <a href=http://www.loria.fr/~zimmerma/records/factor.html>factoring record page</a> and <a href="http://www.mersenneforum.org/">Mersenne forum</a>. Acknowledge to those who made them available.</li>
+
+<li>As usual, a short sieving test is more reliable when comparing polynomials with simlar Murphy's E scores.</li>
+
+<li>The projections are done by ignoring the o(1) in the number field sieve asymptotic complexity.</li>
+
+</ul>
+
+<h2>2. How to read</h2>
+
+<ul>
+
+<li>Each row consists of projected Murphy E's (<font color="#4863A0">in blue font</font>) from an actual (used in factorization) polynomial's Murphy E score (<b>in bold black font</b>).</li>
+
+<li>To estimate the espected Murphy E for an integer of certain size, look for integer of that (or similar) size in the table's header and read the column attached to it. For instance, RSA-170 has projected Murphy E between 1.11e-13 and 3.48e-13.</li>
+
+</ul>
+
+
+<h2>3. Degree 5</h2>
+
+<table cellpadding="2" cellspacing="0" width="100%" border="1">	
+<!--#include virtual="polys_table_deg5.inc" -->
+</table></br>
+
+<h2>4. Degree 6</h2>
+
+<table cellpadding="2" cellspacing="0" width="100%" border="1">	
+<!--#include virtual="polys_table_deg6.inc" -->
+</table>
+
+
+<br>
+
+
+<h2>5. Some notes</h2>
+<ul>
+<li><a href="polys">All polynomials</a> and <a href="estimate_time.sage">script</a>.</li>
+<li>All polynomial files must have "n: xxx". It may or may not have Murphy E. The code only parse the following pattern:
+<ul>
+<li> <font color="#4863A0">n: xxx</font></li>
+<li> <font color="#4863A0"># MurphyE\(Bf=(.+),Bg=(.+),area=(.+)\)=([0-9]*\.?[0-9]+e-?[0-9]+)?</font> </li>
+<li><font color="#4863A0"># name: xxx </font></li>
+<li><font color="#4863A0"># comment: xxx</font></li>
+</ul>
+<li>Run "Sage: read_polyfolder("polys/deg5") and read_polyfolder("polys/deg6")". Put those outputs to those *.inc files which will be included by SSI.</li>
+</ul>
+</br>
+
+<br>
+
+
+
+<address>
+  This page was updated on Feb 2016.
+</address>
+
+</body>
+</html>

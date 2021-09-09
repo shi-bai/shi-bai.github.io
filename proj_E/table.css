@@ -1,0 +1,17 @@
+table
+{
+  text-align: center;
+  border-width: 1px;
+  font-size: 10pt;
+}
+
+tr:hover {
+  background-color: #e1eafe; 
+}
+
+th, td{
+   height: 30px;
+   width: 10px;
+   word-wrap: break-all;
+}
+

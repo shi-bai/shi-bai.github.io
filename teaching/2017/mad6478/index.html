@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="GENERATOR" content="Mozilla/4.7 [en] (X11; I; Linux 2.2.13 i686) [Netscape]">
+    <title>MAD 6478: Cryptanalysis</title>
+  </head>
+  <body>
+<hr style="height:2px;border:none;color:#333;background-color:#333;" />
+<style> .gone {   text-decoration: line-through; } </style> 
+
+    <h1>MAD6478 Cryptanalysis (Spring 2017)
+    </h1>
+    <b>Instructor:</b>&nbsp; Dr. Shi Bai
+    <br><b>Office:</b>&nbsp; SE230 of Science &amp; Engineering Bldg
+    <br><b>Email:&nbsp;</b> <a href="mailto: sbai@fau.edu">sbai@fau.edu</a>
+    <br><b>Lecture time and location:&nbsp;</b> 
+    M W	5:30PM-6:50PM	 in <b>FL404 (Fleming Hall)</b>.
+
+    <br>
+    <b><a href="syllabus.pdf">Syllabus and outline (pdf)</a> </b><br>
+
+    <b><a href="assignment1.pdf">Assignment 1 (due Feb 20)</a> </b><br>
+    <b><a href="assignment2.pdf">Assignment 2 (due Apr 19)</a> </b><br>    
+    
+<hr style="height:2px;border:none;color:#333;background-color:#333;" />
+
+<b><div id="div_id" align="center"><h2>Schedule</h2></b></div> 
+
+
+<table border="1" cellpadding="2" cellspacing="2" width="/-100%">
+  <caption>&nbsp;
+  <br>
+  </caption><tbody>
+  </tbody>
+  <tbody>
+    <tr valign="top">
+      <td valign="top"><b>Lectures</b></td>
+      <td valign="top"><b>Dates</b></td>
+      <td valign="top"><b>Mon</b></td>
+      <td valign="top"><b>Literature</b></td>
+    </tr>
+
+    <tr valign="top">
+      <td valign="center"><b>1</b></td>
+      <td valign="center">09/Jan</td>
+      <td valign="top">
+        Introduction and course organization; review of PKE scheme.
+<td valign="top"> [Gal12, <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch1.pdf">Ch. 1</a>]
+  &nbsp;
+</td>
+</tr>
+
+
+    <tr valign="top">
+      <td valign="center"><b>2</b></td>
+      <td valign="center">11/Jan</td>
+      <td valign="top">Review of textbook RSA; security notions and  attack models; <br>attacks for RSA. </td>
+<td valign="top">  [Gal12, <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch1.pdf">Ch. 1</a> and  <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch24.pdf">Ch. 24</a>] </td> 
+</tr>
+
+
+
+    <tr valign="top">
+      <td valign="center"><b>3</b></td>
+      <td valign="center">18/Jan</td>
+      <td valign="top">Attacks on RSA parameters: Wiener attack etc. </td>
+<td valign="top">  [Gal12,  <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch24.pdf">Ch. 24</a>]  <br> D. Boneh. <a href="https://crypto.stanford.edu/~dabo/papers/RSA-survey.pdf">Twenty years of attacks on the RSA cryptosystem</a>  <br> M. Wiener. <a href="https://www.cits.ruhr-uni-bochum.de/imperia/md/content/may/krypto2ss08/shortsecretexponents.pdf">Cryptanalysis of Short RSA Secret Exponents</a> </td> 
+</tr>
+
+    <tr valign="top">
+      <td valign="center"><b>4</b></td>
+      <td valign="center">23/Jan</td>
+      <td valign="top">Attacks on RSA variants: CRT-RSA and attacks. </td>
+<td valign="top">  [Gal12,  <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch24.pdf">Ch. 24</a>]  <br> D. Boneh. <a href="https://crypto.stanford.edu/~dabo/papers/RSA-survey.pdf">Twenty years of attacks on the RSA cryptosystem</a>  </td> 
+</tr>
+
+
+
+    <tr valign="top">
+      <td valign="center"><b>5</b></td>
+      <td valign="center">25/Jan</td>
+      <td valign="top">Lattices: definition, Gram-Schmidt, determinant, <br> minimum distance.  </td>
+      <td valign="top">  [Gal12,  <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch16.pdf">Ch. 16</a>]  <br> D. Micciancio's <a href="http://cseweb.ucsd.edu/classes/wi10/cse206a/"> Lecture 1</a> <br>  O. Regev's <a href="http://www.cims.nyu.edu/~regev/teaching/lattices_fall_2004/">Lecture 1</a>
+ </td> 
+</tr>
+
+    <tr valign="top">
+      <td valign="center"><b>6</b></td>
+      <td valign="center">30/Jan</td>
+      <td valign="top">Lattices: Minkowski's theorems; lattice problems </td>
+      <td valign="top">  [Gal12,  <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch16.pdf">Ch. 16</a>]  <br> D. Micciancio's <a href="http://cseweb.ucsd.edu/classes/wi10/cse206a/"> Lecture 1</a> <br>  O. Regev's <a href="http://www.cims.nyu.edu/~regev/teaching/lattices_fall_2004/">Lecture 1</a>
+ </td> 
+</tr>
+
+    
+
+    <tr valign="top">
+      <td valign="center"><b>7</b></td>
+      <td valign="center">1/Feb</td>
+      <td valign="top">Lattices: LLL algorithm. </td>
+      <td valign="top">  [Gal12,  <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch17.pdf">Ch. 17</a>]  <br> D. Micciancio's <a href="http://cseweb.ucsd.edu/classes/wi10/cse206a"> Lecture 3</a> <br>  O. Regev's <a href="http://www.cims.nyu.edu/~regev/teaching/lattices_fall_2004/">Lecture 2 </a> <br> A. K. Lenstra, H. W. Lenstra, L. Lov&aacutesz. <a href="https://www.math.leidenuniv.nl/~hwl/PUBLICATIONS/1982f/art.pdf">Factoring polynomials with rational coefficients</a>
+ </td> 
+</tr>
+
+
+    <tr valign="top">
+      <td valign="center"><b>8</b></td>
+      <td valign="center">6/Feb</td>
+      <td valign="top">Coppersmith method and <br> more attacks on RSA parameters</td>
+      <td valign="top">  [Gal12,  <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch17.pdf">Ch. 17</a>]  <br> D. Micciancio's <a href="http://cseweb.ucsd.edu/classes/sp07/cse206a/lecture8.pdf"> Lecture 8</a> <br>  O. Regev's <a href="http://www.cims.nyu.edu/~regev/teaching/lattices_fall_2004/ln/rsa.pdf">Lecture 4</a> <br> D. Coppersmith. <a href="https://static.aminer.org/pdf/PDF/000/192/854/finding_a_small_root_of_a_univariate_modular_equation.pdf">Finding a Small Root of a Univariate Modular Equation</a>
+ </td> 
+</tr>
+
+
+    <tr valign="top">
+      <td valign="center"><b>9</b></td>
+      <td valign="center">8/Feb</td>
+      <td valign="top">Knapsack cryptosystem and lattice attack</td>
+      <td valign="top">  A. M. Odlyzko. <a href="http://www.dtc.umn.edu/~odlyzko/doc/arch/knapsack.survey.pdf">The Rise and Fall of Knapsack Cryptosystems</a> <br> A. M. Frieze. <a href="https://www.math.cmu.edu/~af1p/Texfiles/LAGARIAS-ODLYZKO.pdf">On the Lagarias-Odlyzko Algorithm for the Subset Sum Problem</a>
+ </td> 
+</tr>
+
+    
+
+        <tr valign="top">
+      <td valign="center"><b>10</b></td>
+      <td valign="center">13/Feb</td>
+      <td valign="top">Composite tests: Fermat, Solovay-Strassen and Miller–Rabin tests.</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 3 (eBook FAU)</a>] </td>
+</tr>
+
+    <tr valign="top">
+      <td valign="center"><b>11</b></td>
+      <td valign="center">15/Feb</td>
+      <td valign="top">Primality tests: Lucas, P&eacutepin, Proth and Pocklington-Brillhart-Lehmer-Selfridge tests.</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 3 (eBook FAU)</a>] <br> C. Pomerance. <a href="https://math.dartmouth.edu/~carlp/lucasprime3.pdf">Primality testing: variations on a theme of Lucas</a> </td>
+
+
+    </tr>
+    <tr valign="top">
+      <td valign="center"><b>12</b></td>
+      <td valign="center">20/Feb</td>
+      <td valign="top">Introduction to elliptic curves</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 7 (eBook FAU)</a>] </td>
+    </tr>
+
+        <tr valign="top">
+      <td valign="center"><b>13</b></td>
+      <td valign="center">22/Feb</td>
+      <td valign="top">ECPP primality tests: Goldwasser-Kilian and Atkin-Morain; ECM. </td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 7 (eBook FAU)</a>] <br> S. Goldwasser and J. Kilian. <a href="https://pdfs.semanticscholar.org/997d/f4e2a661aed97b2ad782531aa2ce122cab4d.pdf">Primality Testing Using Elliptic Curves</a> <br> H. W. Lenstra. <a href="http://wstein.org/edu/124/lenstra/lenstra.pdf">Factoring integers with elliptic curves</a></td>
+</tr>
+
+
+    <tr valign="top">
+      <td valign="center"><b>14</b></td>
+      <td valign="center">27/Feb</td>
+      <td valign="top">AKS primality test</td>
+      <td valign="top">M. Agrawal, N. Kayal and N. Saxena.<a href="https://www.cse.iitk.ac.in/users/manindra/algebra/primality_v6.pdf">Primes is in P</a></td>
+</tr>
+
+
+    <tr valign="top">
+      <td valign="center"><b>15</b></td>
+      <td valign="center">01/Mar</td>
+      <td valign="top">Integer factorization: trial division, sieving, Fermat's and Pollard's Rho method.</td>
+      <td valign="top">[Gal12, <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch14.pdf">Ch. 14</a>] <br>  J. M. Pollard. <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15451-f11/www/lectures/lect1122_Pollard.pdf">A Monte Carlo method for factorization</a> <br> R. P. Brent. <a href="https://maths-people.anu.edu.au/~brent/pd/rpb051i.pdf">An improved Monte Carlo factorization algorithm</a></td>
+</tr>
+
+    <tr valign="top">
+      <td valign="center"><b>16/17</b></td>
+      <td valign="center">Spring Break</td>
+      <td valign="top"></td>
+      <td valign="top"></td>
+</tr>
+
+    
+    <tr valign="top">
+      <td valign="center"><b>18</b></td>
+      <td valign="center">13/Mar</td>
+      <td valign="top">Pollard's Rho method for DLP, Oorschot and Wiener's parallelization.</td>
+      <td valign="top">[Gal12, <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/ch14.pdf">Ch. 14</a>] <br>  J. M. Pollard. <a href="http://www.ams.org/journals/mcom/1978-32-143/S0025-5718-1978-0491431-9/S0025-5718-1978-0491431-9.pdf">Monte Carlo Methods for Index Computation (mod p)</a> <br> P. C. van Oorschot and M. J. Wiener. <a href="http://people.scs.carleton.ca/~paulv/papers/JoC97.pdf">Parallel Collision Search with Cryptanalytic Applications</a></td>
+</tr>
+
+
+        <tr valign="top">
+      <td valign="center"><b>19</b></td>
+      <td valign="center">15/Mar</td>
+      <td valign="top">Integer factorization: Pollard's p-1 method, Lenstra's elliptic curve method.</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 7 (eBook FAU)</a>] <br>
+        J. M. Pollard. <a href="https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0305004100049252">Theorems of factorization and primality testing</a>      <br> H. W. Lenstra. <a href="http://wstein.org/edu/124/lenstra/lenstra.pdf">Factoring integers with elliptic curves</a></td>
+</tr>
+
+
+
+        <tr valign="top">
+      <td valign="center"><b>20</b></td>
+      <td valign="center">20/Mar</td>
+      <td valign="top">Integer factorization: analysis of ECM, Dixon's method.</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 7 (eBook FAU)</a>] <br> A. Granville. <a href="http://www.dms.umontreal.ca/~andrew/PDF/msrire.pdf">Smooth numbers: computational number theory and beyond</a> <br> J. D. Dixon. <a href="http://www.ams.org/journals/mcom/1981-36-153/S0025-5718-1981-0595059-1/S0025-5718-1981-0595059-1.pdf">Asymptotically fast factorization of integers</a><br>     C. Pomerance. <a href="http://plouffe.fr/simon/math/Computational%20Methods%20in%20Number%20Theory.pdf">Analysis and Comparison of Some Integer Factoring Algorithms</a>
+      </td>
+
+
+
+        <tr valign="top">
+      <td valign="center"><b>21</b></td>
+      <td valign="center">22/Mar</td>
+      <td valign="top">Integer factorization: quadratic sieve.</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 6 (eBook FAU)</a>] <br>     C. Pomerance. <a href="https://math.dartmouth.edu/~carlp/PDF/qs08.pdf">Smooth numbers and the quadratic sieve</a>
+      </td>
+      
+
+
+
+        <tr valign="top">
+      <td valign="center"><b>22</b></td>
+      <td valign="center">27/Mar</td>
+      <td valign="top">Number field sieve for integer factorization and DLP.</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 6 (eBook FAU)</a>] <br>
+        A. K. Lenstra, H. W. Lenstra, M. S. Manasse and J. M. Pollard. <a href="https://www.math.leidenuniv.nl/~hwl/PUBLICATIONS/1993d/art.pdf">The number field sieve</a> <br>
+        J. P. Buhler, H. W. Lenstra and C. Pomerance. <a href="https://www.math.leidenuniv.nl/~hwl/PUBLICATIONS/1993e/art.pdf">Factoring integers with the number field sieve</a>
+      </td>
+      
+
+        <tr valign="top">
+      <td valign="center"><b>23</b></td>
+      <td valign="center">29/Mar</td>
+      <td valign="top">Parameters for RSA-based schemes; <br> Pohlig-Hellman algorithm and Baby-step Giant-step for DLP.</td>
+      <td valign="top">[CrP05, <a href="http://fau.catalog.fcla.edu/fa.jsp?st=prime+numbers+a+computational+perspective&ix=kw&fl=bo&V=D&S=0561487884999276&I=1#top">Ch. 5 (eBook FAU)</a>] <br>
+        Digital Signature Standard: <a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf#page=59"> FIPS PUB 186-4</a> <br>
+S. Pohlig and M. Hellman. <a href="http://www-ee.stanford.edu/~hellman/publications/28.pdf">An Improved Algorithm for Computing Logarithms over GF(p) and its Cryptographic Significance</a> 
+              </td>
+      
+        <tr valign="top">
+      <td valign="center"><b>24</b></td>
+      <td valign="center">03/Apr</td>
+      <td valign="top">Pollard's kangaroo method for DLP; <br> Parameters for DLP-based schemes.</td>
+      <td valign="top">
+J. M. Pollard. <a href="http://www.ams.org/journals/mcom/1978-32-143/S0025-5718-1978-0491431-9/S0025-5718-1978-0491431-9.pdf"> Monte Carlo Methods for Index Computation (mod p)</a> <br>
+
+        
+J. M. Pollard. <a href="http://math.boisestate.edu/~liljanab/Crypto2Spring10/PollardKangaroo.pdf"> Kangaroos, Monopoly and Discrete Logarithms</a> <br>
+
+S. D. Galbraith, J. M. Pollard and R. S. Ruprai. <a href="http://www.ams.org/journals/mcom/2013-82-282/S0025-5718-2012-02641-X/S0025-5718-2012-02641-X.pdf">Computing discrete logarithms in an interval</a><br>
+
+NIST Special Publication 800-56A Rev2. <a href="http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Ar2.pdf">Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography </a>
+      </td>
+        </tr>
+
+                <tr valign="top">
+      <td valign="center"><b>25</b></td>
+      <td valign="center">05/Apr</td>
+      <td valign="top">Block ciphers: security notions and attack models; <br> brute-force attacks; Diffie and Hellman's meet-in-the-middle for <br> multiple encryption;  Hellman's tradeoff attack on block ciphers</td>
+      <td valign="top">
+        
+[YL14, Ch. 6] <br>
+W. Diffie and M. E. Hellman. <a href = "https://www-ee.stanford.edu/~hellman/publications/27.pdf">Exhaustive Cryptanalysis of the NBS Data Encryption Standard</a><br>
+
+M. E. Hellman <a href="http://www.karlin.mff.cuni.cz/~hojsik/ku/papers/Hellman_ACryptanalyticTime-MemoryTradeoff_1980.pdf"> A cryptanalytic time-memory trade-off</a> <br>
+      </td>
+
+
+                      <tr valign="top">
+      <td valign="center"><b>26</b></td>
+      <td valign="center">10/Apr</td>
+      <td valign="top">Design principles of block ciphers; <br>  substitution-permutation network;<br> attacks for reduced-round simple SP-network </td>
+      <td valign="top">
+        
+[YL14, Ch. 6] <br>
+      </td>
+
+
+        
+
+                      <tr valign="top">
+      <td valign="center"><b>27</b></td>
+      <td valign="center">12/Apr</td>
+      <td valign="top">Linear analysis of block ciphers; piling-up lemma; BKW for LPN</td>
+      <td valign="top">
+        
+        [YL14, Ch. 6] <br>
+        H. M. Heys. <a href="https://www.engr.mun.ca/~howard/PAPERS/ldc_tutorial.pdf">    A Tutorial on Linear and Differential Cryptanalysis </a> <br>
+
+        M. Matsui. <a href="https://www.cs.bgu.ac.il/~beimel/Courses/crypto2001/Matsui.pdf">Linear Cryptanalysis Method for DES Cipher</a>
+      </td>
+
+        
+
+                      <tr valign="top">
+      <td valign="center"><b>28</b></td>
+      <td valign="center">17/Apr</td>
+      <td valign="top">Introduction to quantum computing;  quantum key distribution </td>
+      <td valign="top">
+        
+      </td>
+
+
+                      <tr valign="top">
+      <td valign="center"><b>29</b></td>
+      <td valign="center">19/Apr</td>
+      <td valign="top">Quantum algorithms</td>
+      <td valign="top">
+        
+      </td>
+
+        
+      
+
+
+
+      
+    <tr valign="top">
+      <td valign="center"><b></b></td>
+      <td valign="center"></td>
+      <td valign="top"></td>
+      <td valign="top"></td>
+</tr>
+
+
+
+
+    
+
+
+  </td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr style="height:2px;border:none;color:#333;background-color:#333;" />
+
+
+<b>List of articles</b><br>
+
+Each student choose one item in the list for the project. First arrived first served!
+    
+
+<ul>
+
+  <li><strike> M. Bellare, A. Desai, D. Pointcheval and P. Rogaway. <a href="http://cseweb.ucsd.edu/~mihir/papers/relations.html">Relations among notions of security for public-key encryption schemes</a>. Crypto 1998.</strike> </li>
+
+  <li>D. Boneh and R. Venkatesan. <a href="http://crypto.stanford.edu/~dabo/papers/no_rsa_red.pdf">Breaking RSA may be easier than factoring</a>. EUROCRYPT 1998.</li>
+
+  <li> <strike> &Eacute. Jaulmes and A. Joux. <a href="http://www.iacr.org/archive/crypto2000/18800021/18800021.pdf">A Chosen-Ciphertext Attack against NTRU</a>. CRYPTO 2000. </strike> </li>
+
+  <li>  <strike>E. Teske. <a href="http://www.ams.org/journals/mcom/2001-70-234/S0025-5718-00-01213-8/S0025-5718-00-01213-8.pdf">On random walks for Pollard's Rho method</a>. Math. Comput. 70(234): 809-825 (2001). </strike></li>
+
+  <li><strike>D. Bleichenbacher and	A. May. <a href="https://www.iacr.org/archive/pkc2006/39580001/39580001.pdf">New Attacks on RSA with Small Secret CRT-Exponents</a>. PKC 2006.</strike></li> 
+
+  <li>A. Joux, D. Naccache, E. Thom&eacute. <a href="http://eprint.iacr.org/2007/424.pdf">When e-th Roots Become Easier Than Factoring</a>. ASIACRYPT 2007.</li>
+
+  <li> <strike>J. H. Cheon, J Hong and M. Kim. <a href="http://www.iacr.org/archive/asiacrypt2008/53500477/53500477.pdf">Speeding Up the Pollard Rho Method on Prime Fields.</a> ASIACRYPT 2008.</strike></li> 
+
+
+  <li><strike>C. Gentry, C. Peikert, V. Vaikuntanathan. <a href="https://eprint.iacr.org/2007/432.pdf">How to Use a Short Basis: Trapdoors for hard lattices and new cryptographic constructions.</a> STOC 2008.</strike></li>
+
+  <li>A. May and M. Ritzenhofen. <a href="http://www.cits.rub.de/imperia/md/content/may/paper/implicit_final.pdf">Implicit Factoring: On Polynomial Time Factoring Given Only an Implicit Hint</a>. PKC 2009.</li> 
+
+  <li>  <strike>D. Hofheinz and E. Kiltz. <a href="https://www.iacr.org/archive/eurocrypt2009/54790313/54790313.pdf">Practical Chosen Ciphertext Secure Encryption from Factoring</a>. EUROCRYPT 2009. </strike></li>
+
+  <li> P. Nguyen and D. Stehl&eacute. <a href="http://perso.ens-lyon.fr/damien.stehle/downloads/fpLLL_journal.pdf">An LLL Algorithm with Quadratic Complexity</a>. SIAM J. COMPUT 2009.</li>
+
+  <li> D. Micciancio and P. Voulgaris <a href="https://cseweb.ucsd.edu/~daniele/papers/Sieve.pdf">Faster exponential time algorithms for the shortest vector problem</a>. SODA 2010.</li>
+
+  <li> N. Howgrave-Graham and A. Joux <a href="https://eprint.iacr.org/2010/189.pdf">New Generic Algorithms for Hard Knapsacks</a>.  EUROCRYPT 2010.</li>
+  
+  <li>T. Kleinjung and et al. <a href="https://eprint.iacr.org/2010/006.pdf">Factorization of a 768-bit RSA modulus</a>. CRYPTO 2010. AND  Arjen Lenstra and et al. <a href="https://www.iacr.org/archive/asiacrypt2003/02_Session02/18_019/28940287.pdf">Factoring Estimates for a 1024-Bit RSA Modulus</a>. ASIACRYPT 2003.</li>
+
+  <li>V. Lyubashevsky, C. Peikert and O. Regev. <a href="https://eprint.iacr.org/2012/230.pdf">On Ideal Lattices and Learning with Errors over Rings</a>. EUROCRYPT 2010.</li>
+
+  <li><strike>V. Lyubashevsky. <a href="http://www.iacr.org/archive/eurocrypt2012/72370731/72370731.pdf">Lattice Signatures Without Trapdoors</a>. EUROCRYPT 2012.</strike></li>
+
+  <li><strike>D. Micciancio and C. Peikert. <a href="http://eprint.iacr.org/2011/501">
+    Trapdoors for Lattices: Simpler, Tighter, Faster, Smaller</a>. EUROCRYPT 2012.</strike></li>
+
+
+  <li><strike>S. D. Galbraith, J. M. Pollard and R. S. Ruprai. <a href="http://www.ams.org/journals/mcom/2013-82-282/S0025-5718-2012-02641-X/S0025-5718-2012-02641-X.pdf">Computing discrete logarithms in an interval</a>. Math. Comput. 82, No. 282 (2013) 1181-1195.</strike></li>
+
+
+  <li> <strike>R. Barbulescu, P. Gaudry, A. Joux and E. Thom&eacute. <a href="https://eprint.iacr.org/2013/400.pdf">A quasi-polynomial algorithm for discrete logarithm in finite fields of small characteristic.</a> EUROCRYPT 2014.</strike></li>
+
+
+
+
+
+  
+</ul>
+
+
+
+
+
+</body></html>
